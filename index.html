@@ -15,90 +15,48 @@
     <!-- <link rel="stylesheet" href="css/style.css"> -->
   </head>
   <body id="home" class="bg-white" data-spy="scroll" data-target=".navbar">
-    <!-- navBar -->
-    <nav class="navbar navbar-expand-lg bg-dark text-white fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#bd">BD's</a>
-       <div class="">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon text-primary"> Info</span>
+       <!-- navBar -->
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 fixed-top">
+        <a class="navbar-brand order-1" href="#">BD</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
-      </div>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#home"
-                >Home <span class="sr-only">(current)</span></a
-              >
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="modal"
-              data-target="#book-now" href="book">Book</a>
-            </li>
-            <li class="nav-item dropdown order-2">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                More Information
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="calender.html">Calender</a>
-                <a class="dropdown-item" href="#profiles">Profiles</a>
-              </div>
+              <a class="nav-link"  data-toggle="modal"
+              data-target="#book-now" href="#book">Book</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#services">Services</a>
             </li>
+            
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input
-              class="form-control mr-sm-2"
-              type="search"
-              placeholder="Search...."
-              aria-label="Search"
-            />
-            <button class="btn btn-primary my-2 mr-0" type="submit">
-              Search
-            </button>
-          </form>
         </div>
-      </div>
-    </nav>
-    <!--/ navBar -->
-
-    <!-- jumbotron -->
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container text-center text-white pt-4">
-        <h1 class="display-1">BD's</h1>
-        <p class="lead">The fastest most hassle free way to schedule.</p>
-        <p class="lead">No Need to wait.</p>
-        <p class="lead">Look Great!</p>
-        <!-- callout button -->
-        <button
-          type="button"
-          class="btn btn-outline-info btn-lg"
-          data-toggle="modal"
-          data-target="#book-now"
-        >
-          Book Now!
-        </button>
-      </div>
-    </div>
+      </nav>
+          <!--/ navBar -->
+      
+          <!-- jumbotron -->
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container text-center text-white pt-4">
+              <h1 class="display-1">BD<span>irect</span></h1>
+              <p class="lead">The fastest most hassle free way to schedule.</p>
+              <p class="lead">No Need to wait.</p>
+              <p class="lead">Look Great!</p>
+              <!-- callout button -->
+              <button
+                type="button"
+                class="btn btn-outline-info btn-lg"
+                data-toggle="modal"
+                data-target="#book-now"
+              >
+                Book Now!
+              </button>
+            </div>
+          </div>
     <!-- /jumbotron -->
 
     <!-- <div class="container text-center">
@@ -182,6 +140,14 @@
                   <label class="form-control-label" for="phone">Phone:</label>
                   <input type="text" class="form-control" id="phone" placeholder="(999)-888-0000">
                 </div>
+                <div class="form-group text-left">
+                  <label class="form-control-label" for="region">Region:</label>
+                  <input type="text" class="form-control" id="region">
+                </div>
+                <div class="form-group text-left">
+                  <label class="form-control-label" for="city">City:</label>
+                  <input type="text" class="form-control" id="city">
+                </div>
 
                 <hr class="mb-4">
                 <h5 class="mb-4 text-left">Payment-Info:</h5>
@@ -241,57 +207,6 @@
       </div>
       <!--/book appointment  -->
 
-       <!-- profiles
-      <h1 id="profiles" class="display-3 text-center pt-4">Profiles</h1>
-      <div class="row mb-5">
-        <div class="col-lg-4">
-          <div class="card mb-3">
-            <img src="img/vivianne.png" class="card-img-top" alt="vivianne" />
-            <div class="card-body">
-              <h5 class="card-title">Vivianne McVue</h5>
-              <p class="card-text">
-                Vivianne is a web developer and teacher who is passionate about
-                building scalable, data-driven web apps, especially ones that
-                address old problems with new tech!
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="card mb-3">
-            <img
-              src="img/nodestradamus.png"
-              class="card-img-top"
-              alt="vivianne"
-            />
-            <div class="card-body">
-              <h4 class="card-title">NodeStradamus</h4>
-              <p class="card-text">
-                "NodeStra" is a software engineer and philosopher trying to
-                leave the world better than he found it. He codes for
-                non-profits, eCommerce, and large-scale web apps.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="card mb-3">
-            <img src="img/ecma.png" class="card-img-top" alt="vivianne" />
-            <div class="card-body">
-              <h4 class="card-title">Ecma Scriptnstuff</h4>
-              <p class="card-text">
-                Ecma found her passion for programming and teaching over 15
-                years ago. She is excited to introduce you to all of the wonders
-                of JavaScript.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-         -->
-      <!-- /profiles -->
    <hr>
 
     <!-- footer -->
