@@ -10,16 +10,18 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>BD's</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <title>Barbers Direct</title>
     <!-- <link rel="stylesheet" href="css/style.css"> -->
   </head>
-  <body id="home" class="bg-white" data-spy="scroll" data-target=".navbar">
-
+  <body id="home" class="bg-#e2e4e6!important" data-spy="scroll" data-target=".navbar">
     <!-- navBar -->
     <nav class="navbar navbar-expand-lg bg-dark text-white fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#bd">BD's</a>
+        <a class="navbar-brand order-1" href="#bd">BD's</a>
        <div class="">
         <button
           class="navbar-toggler"
@@ -30,342 +32,443 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon text-primary">Info</span>
-=======
-       <!-- navBar -->
-       <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 fixed-top">
-        <a class="navbar-brand order-1" href="#">BD</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
->>>>>>> master
+          <span class="navbar-toggler-icon text-primary"> Info</span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+      </div>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#home"
+                >Home <span class="sr-only">(current)</span></a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link"  data-toggle="modal"
-              data-target="#book-now" href="#book">Book</a>
+              <a class="nav-link" data-toggle="modal"
+              data-target="#book-now" href="book">Book</a>
+            </li>
+            <li class="nav-item order-2">
+              <a class="nav-link" href="#barber">Barbers</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#services">Services</a>
+              <a class="nav-link" href="#styles">Styles</a>
             </li>
-            
           </ul>
         </div>
-      </nav>
-          <!--/ navBar -->
-      
-          <!-- jumbotron -->
-          <div class="jumbotron jumbotron-fluid">
-            <div class="container text-center text-white pt-4">
-              <h1 class="display-1">BD<span>irect</span></h1>
-              <p class="lead">The fastest most hassle free way to schedule.</p>
-              <p class="lead">No Need to wait.</p>
-              <p class="lead">Look Great!</p>
-              <!-- callout button -->
-              <button
-                type="button"
-                class="btn btn-outline-info btn-lg"
-                data-toggle="modal"
-                data-target="#book-now"
-              >
-                Book Now!
-              </button>
-            </div>
-          </div>
-    <!-- /jumbotron -->
+      </div>
+    </nav>
+    <!--/ navBar -->
 
-    <!-- <div class="container text-center">
-      <h1 class="display-1 mt-5 text-muted my-5"></h1>
-    </div> -->
-
-    <!-- Services -->
-    <div class="container text-center mb-5">
-      <div class="list-group col-lg-6 text-center mx-auto">
-        <h1 id="services" class="text-center text-muted display-3">Services</h1>
-        <a href="#" class="list-group-item list-group-item-action"
-          ><strong>Fade</strong></a
+    <!-- jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container text-center text-white pt-4">
+        <h1 class="display-1">BD's</h1>
+        <p class=" p lead">The fastest most hassle free way to schedule.</p>
+        <p class=" p lead">No Need to wait.</p>
+        <p class=" p lead">Look Great!</p>
+        <!-- callout button -->
+        <button
+          type="button"
+          class="btn btn-outline-info btn-lg"
+          data-toggle="modal"
+          data-target="#book-now"
         >
-        <a href="#" class="list-group-item list-group-item-action"
-          ><strong>Taper</strong></a
-        >
-        <a href="#" class="list-group-item list-group-item-action"
-          ><strong>Blowout</strong></a
-        >
-        <a href="#" class="list-group-item list-group-item-action"
-          ><strong>Styles</strong></a
-        >
-        <a href="#" class="list-group-item list-group-item-action"
-          ><strong>Shaves</strong></a
-        >
-        <a href="#" class="list-group-item list-group-item-action"
-          ><strong>All-Around</strong></a
-        >
+          Book Now!
+        </button>
       </div>
     </div>
-    <!--/Services  -->
+    <!-- /jumbotron -->
 
-    <!=============================================
-      Form 
-===============================================>
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="book-now"
-      data-backdrop="static"
-      data-keyboard="false"
-      tabindex="-1"
-      aria-labelledby="booking-form"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header bg-primary text-white">
-            <h5 class="modal-title" id="staticBackdropLabel">
-              Book Appointment!
-            </h5>
-            <button
-              type="button"
-              class="close text-white"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4">Pricing</h1>
+    </div>
+
+    <div class="container">
+      <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Regular</h4>
           </div>
-          <div class="modal-body">
-            <!-- registration form... -->
-            <form>
-              <div
-                class="alert alert-success alert-dismissible fade show"
-                role="alert"
-              >
-                <strong>Quickly!</strong> Reserve Your Spot Now!
-                <button
-                  type="button"
-                  class="close"
-                  data-dismiss="alert"
-                  aria-label="Close"
-                >
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="form-group text-left">
-                <label class="form-control-label" for="name">Name:</label>
-                <input type="text" class="form-control" id="name" />
-              </div>
-              <div class="form-group text-left">
-                <label class="form-control-label" for="email">Email:</label>
-                <input type="text" class="form-control" id="email" />
-              </div>
-              <div class="form-group text-left">
-                <label class="form-control-label" for="phone">Phone:</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="phone"
-                  placeholder="(999)-888-0000"
-                />
-              </div>
-
-              <hr class="mb-4" />
-              <h5 class="mb-4 text-left">Payment-Info:</h5>
-
-              <div class="row">
-                <div class="col-lg-6 form-group text-left">
-                  <label for="cc-num">Card Number:</label>
-                  <input class="form-control" id="cc-num" type="text" />
-                </div>
-                <div class="form-group text-left">
-                  <label class="form-control-label" for="region">Region:</label>
-                  <input type="text" class="form-control" id="region">
-                </div>
-                <div class="form-group text-left">
-                  <label class="form-control-label" for="city">City:</label>
-                  <input type="text" class="form-control" id="city">
-                </div>
-
-                <div class="col-lg form-group text-left">
-                  <label for="zip">Zip Code:</label>
-                  <input class="form-control" id="zip" type="text" />
-                </div>
-
-                <div class="col-lg form-group text-left">
-                  <label for="cvv">CVV:</label>
-                  <input class="form-control" id="cvv" type="text" />
-                </div>
-              </div>
-
-              <div class="form-row">
-                <label class="col-lg-12 text-left">Expiration Date:</label>
-                <div class="form-group col-lg-8">
-                  <select class="custom-select form-control" id="exp-month">
-                    <option value="1">1 - January</option>
-                    <option value="2">2 - February</option>
-                    <option value="3">3 - March</option>
-                    <option value="4">4 - April</option>
-                    <option value="5">5 - May</option>
-                    <option value="6">6 - June</option>
-                    <option value="7">7 - July</option>
-                    <option value="8">8 - August</option>
-                    <option value="9">9 - September</option>
-                    <option value="10">10 - October</option>
-                    <option value="11">11 - November</option>
-                    <option value="12">12 - December</option>
-                  </select>
-                </div>
-                <div class="form-group col-lg">
-                  <select class="custom-select form-control" id="exp-year">
-                    <option value="2016">2020</option>
-                    <option value="2017">2021</option>
-                    <option value="2018">2022</option>
-                    <option value="2019">2023</option>
-                    <option value="2020">2024</option>
-                  </select>
-                </div>
-              </div>
-              <hr />
-              <button type="submit" class="btn btn-primary btn-lg btn-left">
-                Book
-              </button>
-            </form>
-            <!-- /registration form... -->
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$20 <small class="text-muted"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Fade</li>
+              <li>Taper</li>
+              <li>Blowouts</li>
+              <li>Help center access</li>
+            </ul>
+            <button  data-toggle="modal"
+            data-target="#book-now" 
+            type="button" 
+            class="btn btn-lg btn-block btn-outline-primary">Book</button>
+          </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Shave</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$15 <small class="text-muted"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Goattee</li>
+              <li>Faded Beard</li>
+              <li>Chin-strap</li>
+              <li>Styled Beard</li>
+            </ul>
+            <button  data-toggle="modal"
+            data-target="#book-now" 
+            type="button" 
+            class="btn btn-lg btn-block btn-outline-warning">Book</button>
+          </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Styles</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$29 <small class="text-muted"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Mohwawk</li>
+              <li>Fade with Line line-through</li>
+              <li>Faded Bun</li>
+              <li>Fade with desing on side</li>
+            </ul>
+            <button  data-toggle="modal"
+            data-target="#book-now" 
+            type="button" 
+            class="btn btn-lg btn-block btn-outline-danger">Book</button>
           </div>
         </div>
       </div>
-    </div>
-    <!--/book appointment  -->
-
-
-  
-    <hr />
-<!-- Apply Modal========================================-->
- <!-- Modal -->
- <div
- class="modal fade"
- id="apply"
- data-backdrop="static"
- data-keyboard="false"
- tabindex="-1"
- aria-labelledby="booking-form"
- aria-hidden="true"
->
- <div class="modal-dialog">
-   <div class="modal-content">
-     <div class="modal-header bg-primary text-white">
-       <h5 class="modal-title" id="staticBackdropLabel">
-         Be A Barber!
-       </h5>
-       <button
-         type="button"
-         class="close text-white"
-         data-dismiss="modal"
-         aria-label="Close"
-       >
-         <span aria-hidden="true">&times;</span>
-       </button>
-     </div>
-     <div class="modal-body">
-       <!-- registration form... -->
-       <form>
-         <div
-           class="alert alert-success alert-dismissible fade show"
-           role="alert"
-         >
-           <strong>Apply Now!</strong>
-           <button
-             type="button"
-             class="close"
-             data-dismiss="alert"
-             aria-label="Close"
-           >
-             <span aria-hidden="true">&times;</span>
-           </button>
-         </div>
-         <div class="form-group text-left">
-           <label class="form-control-label" for="name">Name:</label>
-           <input type="text" class="form-control" id="name" />
-         </div>
-         <div class="form-group text-left">
-           <label class="form-control-label" for="email">Email:</label>
-           <input type="text" class="form-control" id="email" />
-         </div>
-         <div class="form-group text-left">
-           <label class="form-control-label" for="phone">Phone:</label>
-           <input
-             type="text"
-             class="form-control"
-             id="phone"
-             placeholder="(999)-888-0000"
-           />
-         </div>
-         <hr />
-         <button type="submit" class="btn btn-primary btn-lg btn-left">
-           Apply
-         </button>
-       </form>
-       <!-- /registration form... -->
-     </div>
-   </div>
- </div>
-</div>
-
-<!-- /Apply =============================================-->
-
-
-
-=======
-   <hr>
->>>>>>> 
-
-
-
-    <!-- footer -->
-    <div class="row py-3">
-      <div class="col-md-7">
-        <ul class="nav">
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href=""
-              data-toggle="modal"
-              data-target="#book-now"
-              >Book</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Shop Locations</a>
-          </li>
-          <li class="nav-item">
-            <div class="btn-group dropup">
+    
+      <!-- Services -->
+      <div class="container text-center mb-5  ">
+        
+        <!-- <div class="list-group col-lg-6 text-center mx-auto"> -->
+          <h1 id="styles" class="text-center text-muted display-3">Styles</h1>
+          <!-- <a href="#" class="list-group-item list-group-item-action"
+            ><strong>Fade</strong></a
+          >
+          <a href="#" class="list-group-item list-group-item-action"
+            ><strong>Taper</strong></a
+          >
+          <a href="#" class="list-group-item list-group-item-action"
+            ><strong>Blowout</strong></a
+          >
+          <a href="#" class="list-group-item list-group-item-action"
+            ><strong>Styles</strong></a
+          >
+          <a href="#" class="list-group-item list-group-item-action"
+            ><strong>Shaves</strong></a
+          >
+          <a href="#" class="list-group-item list-group-item-action"
+            ><strong>All-Around</strong></a
+          >
+        </div>
+    </div> -->
+      <!--/Services  -->
+ 
+     
+      <!=============================================
+      Form 
+===============================================>
+      <!-- Modal -->
+      <section
+        class="modal fade"
+        id="book-now"
+        data-backdrop="static"
+        data-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="booking-form"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+              <h5 class="modal-title" id="staticBackdropLabel">
+                Book Appointment!
+              </h5>
               <button
                 type="button"
-                class="btn btn-outline-secondary btn-sm dropdown-toggle"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
+                class="close text-white"
+                data-dismiss="modal"
+                aria-label="Close"
               >
-                Join Us
+                <span aria-hidden="true">&times;</span>
               </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#apply" data-toggle="modal"
-                data-target="#apply">Apply</a>
-                <a class="dropdown-item" href="#">More-Info</a>
+            </div>
+            <div class="modal-body">
+              <!-- registration form... -->
+              <form>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <strong>Quickly!</strong> Reserve Your Spot Now!
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="form-group text-left">
+                  <label class="form-control-label" for="name">Name:</label>
+                  <input type="text" class="form-control" id="name">
+                </div>
+                <div class="form-group text-left">
+                  <label class="form-control-label" for="email">Email:</label>
+                  <input type="text" class="form-control" id="email">
+                </div>
+                <div class="form-group text-left">
+                  <label class="form-control-label" for="phone">Phone:</label>
+                  <input type="text" class="form-control" id="phone" placeholder="(999)-888-0000">
+                </div>
+
+                <hr class="mb-4">
+                <h5 class="mb-4 text-left">Payment-Info:</h5>
+
+                <div class="row">
+                  <div class="col-lg-6 form-group text-left">
+                    <label for="cc-num">Card Number:</label>
+                    <input class="form-control" id="cc-num" type="text">
+                  </div>
+                
+                  <div class="col-lg form-group text-left">
+                    <label for="zip">Zip Code:</label>
+                    <input class="form-control" id="zip" type="text">
+                  </div>
+                
+                  <div class="col-lg form-group text-left">
+                    <label for="cvv">CVV:</label>
+                    <input class="form-control" id="cvv" type="text">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <label class="col-lg-12 text-left">Expiration Date:</label>
+                  <div class="form-group col-lg-8">
+                    <select class="custom-select form-control" id="exp-month">
+                      <option value="1">1 - January</option>
+                      <option value="2">2 - February</option>
+                      <option value="3">3 - March</option>
+                      <option value="4">4 - April</option>
+                      <option value="5">5 - May</option>
+                      <option value="6">6 - June</option>
+                      <option value="7">7 - July</option>
+                      <option value="8">8 - August</option>
+                      <option value="9">9 - September</option>
+                      <option value="10">10 - October</option>
+                      <option value="11">11 - November</option> 
+                      <option value="12">12 - December</option>
+                    </select> 
+                  </div>
+                  <div class="form-group col-lg">
+                    <select class="custom-select form-control" id="exp-year">
+                      <option value="2016">2020</option>
+                      <option value="2017">2021</option>
+                      <option value="2018">2022</option>
+                      <option value="2019">2023</option>
+                      <option value="2020">2024</option>
+                    </select>  
+                  </div>
+                </div>
+                <hr>
+                <button type="submit" class="btn btn-primary btn-lg btn-left">Book</button>
+              </form>
+              <!-- /registration form... -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+        <!-- Modal For Application-->
+        <section
+        class="modal fade"
+        id="apply-now"
+        data-backdrop="static"
+        data-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="apply-form"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+              <h5 class="modal-title" id="staticBackdropLabel">
+                Apply!
+              </h5>
+              <button
+                type="button"
+                class="close text-white"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- registration form... -->
+              <form>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <strong>Quickly!</strong> Reserve Your Spot Now!
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="form-group text-left">
+                  <label class="form-control-label" for="name">Name:</label>
+                  <input type="text" class="form-control" id="name">
+                </div>
+                <div class="form-group text-left">
+                  <label class="form-control-label" for="email">Email:</label>
+                  <input type="text" class="form-control" id="email">
+                </div>
+                <div class="form-group text-left">
+                  <label class="form-control-label" for="phone">Phone:</label>
+                  <input type="text" class="form-control" id="phone" placeholder="(999)-888-0000">
+                </div>
+
+                <hr class="mb-4">
+                </div>
+                <hr>
+                <button type="submit" class="btn btn-primary btn-lg btn-left">Apply</button>
+              </form>
+              <!-- /registration for Application... -->
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+    
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+               <img src="images/fade.jpg" alt="">
+                <div class="card-body">
+                  <p class="card-text">High-fade.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
               </div>
             </div>
-          </li>
-        </ul>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="images/taper.jpg" alt="">
+                <div class="card-body">
+                  <p class="card-text">Taper</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="images/blowout.jpg" alt="">
+                <div class="card-body">
+                  <p class="card-text">Blow-out.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="images/style.jpg" alt="">
+                <div class="card-body">
+                  <p class="card-text">Bun fade with line-through.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="images/mohawk.jpg" alt="">
+                <div class="card-body">
+                  <p class="card-text">Mohwawk.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="images/styles.jpg" alt="">
+                <div class="card-body">
+                  <p class="card-text">Fade with line design on one side.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="images/beard-fade.jpg" alt="">
+                <div class="card-body">
+                  <p class="card-text">Beard fade.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="images/goattee.jpg" alt="">
+                <div class="card-body">
+                  <p class="card-text">Beard Goattee style.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="images/chin-strap.jpg" alt="">
+                <div class="card-body">
+                  <p class="card-text">Beard Chin-strap style.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-md text-md-right">
-        <small>&copy; 2020 BD Services.</small>
+      <!--/book appointment  -->
+
+      
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 id="barber" class="featurette-heading ml-5">Be a Barber with Barber direct! <span class="text-muted">It’ll blow your mind.</span></h2>
+        <p class="lead ml-5 text-white">Schedule When you want to cut. Signing-up is easy. Schedule anytime anywhere!</p>
+        <button
+        type="button"
+        class="btn btn-outline-primary btn-lg ml-5"
+        data-toggle="modal"
+        data-target="#apply-now"
+      >
+        Apply Now!
+      </button>
+      </div>
+      <div class="col-md-5">
+       <img class="barber" src="images/barber.webp" alt="">
       </div>
     </div>
+
+   <hr>
+
+    <!-- footer -->
+    <footer class="container ">
+      <p class="float-right"><a href="#">Back to top</a></p>
+      <p>&copy; 2020 Barber-Direct, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
     <!-- /footer -->
     <!-- /footer -->
 
+
     <!-- Optional JavaScript -->
+    <script src="js/app.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -382,5 +485,11 @@
       integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
       crossorigin="anonymous"
     ></script>
+    <!-- <script>
+      var scroll = new SmoothScroll('a[href*="#"]', {
+          speed: 1700,
+          speedAsDuration: true
+      });
+      </script> -->
   </body>
 </html>
