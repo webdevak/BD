@@ -1,9 +1,8 @@
 const sr = ScrollReveal();
 
-sr.reveal('div', {
+sr.reveal('.move', {
   origin: 'top',
   distance: '50px',
-  container: '.modal-content',
   scale: 1,
   duration: 2000
 });
