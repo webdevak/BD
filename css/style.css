@@ -3,6 +3,19 @@
     background-size: cover;
 }
 
+.home:hover {
+    border-bottom: rgb(0, 68, 255) 3px solid;
+}
+.Book:hover {
+    border-bottom: rgb(0, 68, 255) 3px solid;
+}
+.Styles:hover {
+    border-bottom: rgb(0, 68, 255) 3px solid;
+}
+.Barbers:hover {
+    border-bottom: rgb(0, 68, 255) 3px solid;
+}
+
 .p {
     font-weight:bolder;
 }
